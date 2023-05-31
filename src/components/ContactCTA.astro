@@ -5,10 +5,18 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:me@example.com">
-		Send Me a Message
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+	<div>
+		<CallToAction href="mailto:contact@abiel.dev">
+			Send Me a Message
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+		<div style={{
+			padding: "2rem 0rem"
+		}}>
+			<h3>Email: <a id="link" href="mailto:contact@abiel.dev">contact@abiel.dev<a/></h3>
+			<h3>Or reach out to me on my <a id="link" href="https://www.linkedin.com/in/abiel-fernandez/">LinkedIn.</a></h3>
+		</div>
+	</div>
 </aside>
 
 <style>
@@ -22,6 +30,10 @@ import Icon from './Icon.astro';
 		padding: 5rem 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
+	}
+
+	#link:hover {
+		text-decoration: underline;
 	}
 
 	h2 {
