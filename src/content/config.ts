@@ -11,4 +11,14 @@ export const collections = {
 			img_alt: z.string().optional(),
 		}),
 	}),
+	work_experience: defineCollection({
+		schema: z.object({
+			title: z.string(),
+			job_title: z.string(),
+			location: z.string(),
+			start_date: z.coerce.date(),
+			end_date: z.coerce.date(),
+			bullet_points: z.array(z.string())
+		})
+	})
 };

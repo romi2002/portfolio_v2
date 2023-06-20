@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    experience: CollectionEntry<'work_experience'>;
+}
+
+const { data, slug } = Astro.props.experience;
+---
+
+<div>
+    <h1>
+        {data.title}
+    </h1>
+</div>
