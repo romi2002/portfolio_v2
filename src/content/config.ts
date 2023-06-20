@@ -20,5 +20,14 @@ export const collections = {
 			end_date: z.coerce.date(),
 			bullet_points: z.array(z.string())
 		})
-	})
+	}),
+	mentions: defineCollection({
+		schema: z.object({
+			title: z.string(),
+			date: z.coerce.date(),
+			img: z.string(),
+			img_alt: z.string(),
+			url: z.string()
+		})
+	}),
 };

@@ -25,6 +25,8 @@ const projects = (await getCollection('work'))
 
 // TODO sort by date
 const work_experience = (await getCollection("work_experience"))
+	.sort((a, b) => b.data.start_date.valueOf() - a.data.start_date.valueOf())
+	.slice(0, 4);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -59,9 +61,11 @@ const work_experience = (await getCollection("work_experience"))
 				</header>
 
 				<div class="gallery">
+					<div class="grid flex flex-col gap-4 lg:gap-8">
 					{work_experience.map((experience) => (
 						<WorkExperienceView experience={experience}/>
 					))}
+					</div>
 				</div>
 			</section>
 

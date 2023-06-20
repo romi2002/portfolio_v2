@@ -37,7 +37,9 @@ const format_job_date = (date) => {
 
 <style>
     .card {
-        height: 11rem;
+        min-height: 11rem;
+        width: 100%;
+        height: fit-content;
         background: var(--gradient-subtle);
         border: 1px solid var(--gray-800);
         border-radius: 0.75rem;
@@ -45,9 +47,9 @@ const format_job_date = (date) => {
         box-shadow: var(--shadow-sm);
         text-decoration: none;
         transition: box-shadow var(--theme-transition);
-        padding: 1em;
-        margin-bottom: 1em;
+        padding: 2em 3em;
         display: flex;
+        word-wrap: break-word;
         flex-direction: column;
     }
 
@@ -63,6 +65,7 @@ const format_job_date = (date) => {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        font-size: var(--text-sm);
     }
 
     #main_display {
@@ -76,9 +79,17 @@ const format_job_date = (date) => {
         flex-direction: column;
     }
 
-    #location_display {
-        display: flex;
-        flex-direction: column;
+    @media (max-width: 800px){
+        #main_display {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+
+        #location_display {
+            margin-top: 0.5em;
+            align-items: flex-start;
+        }
     }
 
     .title {
