@@ -1,15 +1,95 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import format from 'date-fns/format'
 
 interface Props {
     experience: CollectionEntry<'work_experience'>;
 }
 
 const { data, slug } = Astro.props.experience;
+
+const format_job_date = (date) => {
+    return format(date, 'LLL yyyy')
+}
+
 ---
 
-<div>
-    <h1>
-        {data.title}
-    </h1>
+<div class="card">
+    <div id="main_display">
+        <div id="title_display">
+            <span class="title">{data.title}</span>
+            <span class="job_title">{data.job_title}</span>
+        </div>
+        <div id="location_display">
+            <span class="accent_text">{data.location}</span>
+            <span>{format_job_date(data.start_date)} - {format_job_date(data.end_date)} </span>
+        </div>
+    </div>
+
+    <div id="bullet_section">
+        <ul class="bullet_display">
+            {data.bullet_points.map((data_point) => (
+                <li> {data_point} </li>
+            ))}
+        </ul>
+    </div>
 </div>
+
+<style>
+    .card {
+        height: 11rem;
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        text-decoration: none;
+        transition: box-shadow var(--theme-transition);
+        padding: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accent_text {
+        color: var(--accent-dark);
+    }
+
+    #bullet_section {
+        padding-top: 0.5em;
+    }
+
+    #location_display{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #main_display {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #title_display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #location_display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: var(--text-xl);
+        font-weight: 500;
+    }
+    .job-title {
+        font-size: var(--text-md);
+    }
+
+    .bullet_display {
+        list-style: inside;
+    }
+</style>
