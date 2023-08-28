@@ -1,9 +1,17 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 
 import tailwind from "@astrojs/tailwind";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
-  site: 'https://abiel.dev',
+    integrations: [
+        tailwind(),
+        partytown({
+            // Adds dataLayer.push as a forwarding-event.
+            config: {
+                forward: ["dataLayer.push"],
+            },
+        }),],
+    site: 'https://abiel.dev',
 });

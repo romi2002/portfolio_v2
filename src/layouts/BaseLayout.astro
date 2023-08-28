@@ -26,6 +26,16 @@ const { title, description } = Astro.props;
 			<Footer />
 		</div>
 
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-LB50TT3QGW"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-LB50TT3QGW');
+		</script>
+
 		<script>
 			// Add “loaded” class once the document has completely loaded.
 			addEventListener('load', () => document.documentElement.classList.add('loaded'));
