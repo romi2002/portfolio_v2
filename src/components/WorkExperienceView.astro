@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import format from 'date-fns/format'
+import fns from 'date-fns'
+const { format } = fns
 
 interface Props {
     experience: CollectionEntry<'work_experience'>;
