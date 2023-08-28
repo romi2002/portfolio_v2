@@ -4,7 +4,6 @@ import Icon from './Icon.astro';
 ---
 
 <aside>
-	<h2>Interested in working together?</h2>
 	<div>
 		<CallToAction href="mailto:contact@abiel.dev">
 			Send Me a Message
@@ -13,8 +12,8 @@ import Icon from './Icon.astro';
 		<div style={{
 			padding: "2rem 0rem"
 		}}>
-			<h3>Email: <a id="link" href="mailto:contact@abiel.dev">contact@abiel.dev<a/></h3>
-			<h3>Or reach out to me on my <a id="link" href="https://www.linkedin.com/in/abiel-fernandez/">LinkedIn.</a></h3>
+			<h3>Email: <a class="link" href="mailto:contact@abiel.dev">contact@abiel.dev<a/></h3>
+			<h3>Or reach out to me on my <a class="link" href="https://www.linkedin.com/in/abiel-fernandez/">LinkedIn.</a></h3>
 		</div>
 	</div>
 </aside>
@@ -32,7 +31,7 @@ import Icon from './Icon.astro';
 		box-shadow: var(--shadow-sm);
 	}
 
-	#link:hover {
+	.link:hover {
 		text-decoration: underline;
 	}
 

@@ -5,8 +5,8 @@ import ThemeToggle from './ThemeToggle.astro';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	// { label: 'Work', href: '/work/' },
+	// { label: 'About', href: '/about/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -17,10 +17,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 ---
 
 <nav>
-	<div class="menu-header">
+	<div class="menu-header" id="menu-top-bar">
 		<a href="/" class="site-title">
 			<Icon icon="coffee-cup" color="var(--gray-0)" size="1.25em" />
-			Abiel Fernandez
+			Abiel Fernández
 		</a>
 		<menu-button>
 			<template>
@@ -181,6 +181,10 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 		padding: 2rem;
 		background-color: var(--gray-999);
 		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.open-menu {
+		background-color: var(--gray-999);
 	}
 
 	.link {

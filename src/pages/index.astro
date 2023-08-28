@@ -38,13 +38,12 @@ const work_experience = (await getCollection("work_experience"))
 			<header class="hero">
 				<Hero
 					title="Hi, I'm Abiel."
-					tagline="A robotics and digital systems engineering student at Tecnologico de Monterrey."
+					tagline="A Robotics and Digital systems engineering student at Tecnólogico de Monterrey."
 					subtitle="Expected graduation date: June 2024"
 					align="start"
 				>
 				</Hero>
 				<!--<img-->
-				<!--	alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"-->
 				<!--	width="480"-->
 				<!--	height="620"-->
 				<!--	src="/assets/portrait.jpg"-->
@@ -69,43 +68,43 @@ const work_experience = (await getCollection("work_experience"))
 				</div>
 			</section>
 
-			<section class="section with-background with-cta">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Projects</h3>
-					<p>Take a look below at some of my projects.</p>
-				</header>
+			<!--<section class="section with-background with-cta">-->
+			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
+			<!--		<h3>Selected Projects</h3>-->
+			<!--		<p>Take a look below at some of my projects.</p>-->
+			<!--	</header>-->
 
-				<div class="gallery">
-					<Grid variant="offset">
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+			<!--	<div class="gallery">-->
+			<!--		<Grid variant="offset">-->
+			<!--			{-->
+			<!--				projects.map((project) => (-->
+			<!--					<li>-->
+			<!--						<PortfolioPreview project={project} />-->
+			<!--					</li>-->
+			<!--				))-->
+			<!--			}-->
+			<!--		</Grid>-->
+			<!--	</div>-->
 
-				<div class="cta">
-					<CallToAction href="/work/">
-						View All
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</section>
+			<!--	<div class="cta">-->
+			<!--		<CallToAction href="/work/">-->
+			<!--			View All-->
+			<!--			<Icon icon="arrow-right" size="1.2em" />-->
+			<!--		</CallToAction>-->
+			<!--	</div>-->
+			<!--</section>-->
 
-			<section class="stack items-center with-background bg-variant gap-8">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to recieve praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
+			<!--<section class="stack items-center with-background bg-variant gap-8">-->
+			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
+			<!--		<h3>Mentions</h3>-->
+			<!--		<p>-->
+			<!--			I have been fortunate enough to recieve praise for my work in several publications. Take-->
+			<!--			a look below to learn more.-->
+			<!--		</p>-->
+			<!--	</header>-->
 
-				<Mentions/>
-			</section>
+			<!--	<Mentions/>-->
+			<!--</section>-->
 		</main>
 
 		<ContactCTA />

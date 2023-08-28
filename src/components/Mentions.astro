@@ -12,12 +12,12 @@ console.log(mentions)
 ---
 
 <div class="w-full min-w-full">
-    <ul class="flex flex-wrap flex-row gap-8 justify-center content-center">
+    <ul class="flex flex-wrap flex-row gap-8 justify-center content-cente">
     {
         mentions.map((mention) => (
             <li>
                 <a href={mention.data.url} target="_blank">
-                    <div class="mention-card max-w-lg min-w-50 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-700">
+                    <div class="mention-card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-700">
                         <img class="rounded-t-lg" src="/assets/stock-3.jpg"/>
                         <div class="flex ml-2 justify-start align-baseline p-3">
                             <h5 class="text-xl">{mention.data.title}</h5>
