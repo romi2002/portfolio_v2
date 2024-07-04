@@ -33,8 +33,8 @@ const work_experience = (await getCollection("work_experience"))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
-		<div class="wrapper stack gap-8 lg:gap-20">
+	<div class="stack">
+		<div class="wrapper stack gap-8 pb-4">
 			<header class="hero">
 				<Hero
 					title="Hi, I'm Abiel."
@@ -50,23 +50,25 @@ const work_experience = (await getCollection("work_experience"))
 				<!--/>-->
 			</header>
 			<Skills />
+
+			<ContactCTA />
 		</div>
 
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Work Experience</h3>
-					<!--<p>Take a look below at some of my projects.</p>-->
-				</header>
+		<!--<main class="wrapper stack gap-20 lg:gap-48">-->
+		<!--	<section class="section with-background">-->
+		<!--		<header class="section-header stack gap-2 lg:gap-4">-->
+		<!--			<h3>Work Experience</h3>-->
+		<!--			&lt;!&ndash;<p>Take a look below at some of my projects.</p>&ndash;&gt;-->
+		<!--		</header>-->
 
-				<div class="gallery">
-					<div class="grid flex flex-col gap-4 lg:gap-8">
-					{work_experience.map((experience) => (
-						<WorkExperienceView experience={experience}/>
-					))}
-					</div>
-				</div>
-			</section>
+		<!--		<div class="gallery">-->
+		<!--			<div class="grid flex flex-col gap-4 lg:gap-8">-->
+		<!--			{work_experience.map((experience) => (-->
+		<!--				<WorkExperienceView experience={experience}/>-->
+		<!--			))}-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</section>-->
 
 			<!--<section class="section with-background with-cta">-->
 			<!--	<header class="section-header stack gap-2 lg:gap-4">-->
@@ -105,9 +107,7 @@ const work_experience = (await getCollection("work_experience"))
 
 			<!--	<Mentions/>-->
 			<!--</section>-->
-		</main>
-
-		<ContactCTA />
+		<!--</main>-->
 	</div>
 </BaseLayout>
 

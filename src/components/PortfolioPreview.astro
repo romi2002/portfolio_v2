@@ -28,9 +28,11 @@ const { data, slug } = Astro.props.project;
 		font-size: var(--text-lg);
 		font-weight: 500;
 		transition: box-shadow var(--theme-transition);
+		transition: transform .2s ease-in-out;
 	}
 
 	.card:hover {
+		transform: scale(1.01);
 		box-shadow: var(--shadow-md);
 	}
 

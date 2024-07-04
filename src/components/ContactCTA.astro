@@ -3,20 +3,20 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside>
-	<div>
+<div>
+	<div class="flex flex-col justify-start items-center w-full">
 		<CallToAction href="mailto:contact@abiel.dev">
 			Send Me a Message
 			<Icon icon="paper-plane-tilt" size="1.2em" />
 		</CallToAction>
-		<div class="cta flex flex-col" style={{
+		<div class="cta flex flex-col justify-center items-center" style={{
 			padding: "2rem 0rem"
 		}}>
 			<span>Email: <a class="link" href="mailto:contact@abiel.dev">contact@abiel.dev<a/></span>
 			<span>Or reach out to me on my <a class="link" href="https://www.linkedin.com/in/abiel-fernandez/">LinkedIn.</a></span>
 		</div>
 	</div>
-</aside>
+</div>
 
 <style>
 	aside {
